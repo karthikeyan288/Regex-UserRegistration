@@ -18,10 +18,10 @@ public class JavaMain {
 		case 3:
 			regex.emailId();
 			break;
-
-		default:
+    default:
 			System.out.println("Enter the valid data");
 			break;
+		
 		}
 	}
 }

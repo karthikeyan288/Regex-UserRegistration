@@ -21,7 +21,7 @@ public class JavaRegex {
 	public void lastName() {
 		System.out.println("Enter the Last Name : ");
 		String value = sc.nextLine();
-		String pattern = "^[A-Z][a-z]{3,}";
+		String pattern =  "^[A-Z][a-z]{3,}";//"^[91]+\\s\\d{10}$";
 		boolean b3 = Pattern.matches(pattern, value);
 		if (b3) {
 			System.out.println(b3 + "->" + " Match found");
@@ -40,7 +40,5 @@ public class JavaRegex {
 		} else {
 			System.out.println(b3 + "->" + "Match not found");
 		}
-
-	}
-
+  }
 }
