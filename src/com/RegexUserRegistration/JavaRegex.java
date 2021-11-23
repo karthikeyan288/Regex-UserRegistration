@@ -40,7 +40,7 @@ public class JavaRegex {
 		} else {
 			System.out.println(b3 + "->" + "Match not found");
 		}
-	}
+  }
 
 	public void mobileNumber() {
 		System.out.println("Enter the mobile Number : ");
@@ -52,6 +52,7 @@ public class JavaRegex {
 		} else {
 			System.out.println(b3 + "->" + "Match not found");
 		}
-
-	}
+  }
 }
+
+
