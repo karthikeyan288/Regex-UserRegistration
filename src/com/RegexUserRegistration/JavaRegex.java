@@ -4,11 +4,12 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class JavaRegex {
+	Scanner sc = new Scanner(System.in);
+
 	public void firstName() {
-		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the First Name : ");
 		String value = sc.nextLine();
-		String pattern =  "^[A-Z][a-z]{3,}";
+		String pattern = "^[A-Z][a-z]{3,}";
 		boolean b3 = Pattern.matches(pattern, value);
 		if (b3) {
 			System.out.println(b3 + "->" + " Match found");
@@ -18,7 +19,6 @@ public class JavaRegex {
 	}
 
 	public void lastName() {
-		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the Last Name : ");
 		String value = sc.nextLine();
 		String pattern =  "^[A-Z][a-z]{3,}";//"^[91]+\\s\\d{10}$";
@@ -30,4 +30,15 @@ public class JavaRegex {
 		}
 	}
 
+	public void emailId() {
+		System.out.println("Enter the email id : ");
+		String value = sc.nextLine();
+		String pattern = "^[0-9a-zA-Z+-._]+@[-+_.0-9a-zA-Z]*.[a-zA-Z]{2,3}.([a-zA-z]{2,3})*$";
+		boolean b3 = Pattern.matches(pattern, value);
+		if (b3) {
+			System.out.println(b3 + "->" + " Match found");
+		} else {
+			System.out.println(b3 + "->" + "Match not found");
+		}
+  }
 }
