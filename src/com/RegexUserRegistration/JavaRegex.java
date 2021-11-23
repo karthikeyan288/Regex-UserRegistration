@@ -40,7 +40,7 @@ public class JavaRegex {
 		} else {
 			System.out.println(b3 + "->" + "Match not found");
 		}
-  }
+	}
 
 	public void mobileNumber() {
 		System.out.println("Enter the mobile Number : ");
@@ -52,7 +52,18 @@ public class JavaRegex {
 		} else {
 			System.out.println(b3 + "->" + "Match not found");
 		}
-  }
-}
+	}
 
+	public void passWord() {
+		System.out.println("Enter the  Pass Word : ");
+		String number = sc.nextLine();
+		String pattern = "^[a-z]{8}$";
+		boolean b3 = Pattern.matches(pattern, number);
+		if (b3) {
+			System.out.println(b3 + "->" + " Match found");
+		} else {
+			System.out.println(b3 + "->" + "Match not found");
+		}
+	}
+}
 

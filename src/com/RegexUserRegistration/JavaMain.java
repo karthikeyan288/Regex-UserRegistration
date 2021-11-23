@@ -6,9 +6,9 @@ public class JavaMain {
 	public static void main(String[] args) {
 		JavaRegex regex = new JavaRegex();
 		Scanner sc = new Scanner(System.in);
-    System.out.println("Enter the choice 1.firstname 2.lastname 3.emailid: 4.mobile number");
-    int choice = sc.nextInt();
-		switch (choice) {
+		System.out.println("Enter the choice 1.firstname 2.lastname 3.emailid: 4.mobile number 5.Pass Word");
+		int choice = sc.nextInt();
+    switch (choice) {
 		case 1:
 			regex.firstName();
 			break;
@@ -21,8 +21,11 @@ public class JavaMain {
 		case 4:
 			regex.mobileNumber();
 			break;
-
-		default:
+		case 5:
+			regex.passWord();
+			break;
+  
+    default:
 			System.out.println("Enter the valid data");
 			break;
 		}
