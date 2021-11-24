@@ -57,9 +57,9 @@ public class JavaRegex {
 	public void passWord() {
 		System.out.println("Enter the  Pass Word : ");
 		String number = sc.nextLine();
-		String pattern = "^[[A-Z]+a-zA-Z]{8,}$";
-    boolean b3 = Pattern.matches(pattern, number);
-		if (b3) {
+		String pattern = "^[a-z[A-Z]+[0-9]+]{8,}";
+		boolean b3 = Pattern.matches(pattern, number);
+    if (b3) {
 			System.out.println(b3 + "->" + " Match found");
 		} else {
 			System.out.println(b3 + "->" + "Match not found");
