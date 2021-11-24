@@ -8,7 +8,6 @@ public class JavaMain {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the choice 1.firstname 2.lastname 3.emailid: 4.mobile number 5.Pass Word");
 		int choice = sc.nextInt();
-
     switch (choice) {
 		case 1:
 			regex.firstName();
@@ -25,11 +24,9 @@ public class JavaMain {
 		case 5:
 			regex.passWord();
 			break;
-  
     default:
 			System.out.println("Enter the valid data");
 			break;
 		}
 	}
 }
-
