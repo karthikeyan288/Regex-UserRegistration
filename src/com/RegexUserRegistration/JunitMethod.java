@@ -75,6 +75,11 @@ public class JunitMethod {
 		}
 	}
 
+	public boolean addemailAddress(UserData userData) {
+		return Pattern.matches(EMAIL_PATTERN, userData.getEmailid());
+	}
+
+
 	public void addemailId() {
 		System.out.println("Enter the email id : ");
 		String emailid = sc.nextLine();
