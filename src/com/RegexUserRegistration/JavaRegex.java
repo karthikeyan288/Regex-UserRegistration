@@ -59,7 +59,7 @@ public class JavaRegex {
 		String number = sc.nextLine();
 		String pattern = "^[a-z[A-Z]+[0-9]+[!@#$%^&*()_+?,>./<]+]{8,}";
 		boolean b3 = Pattern.matches(pattern, number);
-		if (b3) {
+    if (b3) {
 			System.out.println(b3 + "->" + " Match found");
 		} else {
 			System.out.println(b3 + "->" + "Match not found");
