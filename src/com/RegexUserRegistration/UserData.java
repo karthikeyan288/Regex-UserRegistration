@@ -1,7 +1,5 @@
 package com.RegexUserRegistration;
 
-
-
 public class UserData {
 
 	private String fname;
