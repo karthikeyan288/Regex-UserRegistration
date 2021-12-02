@@ -69,7 +69,6 @@ public class JunitMethod extends Exception {
 		System.out.println("Enter the  Pass Word : ");
 		String password = sc.nextLine();
 		userData.setPassword(password);
-		;
 		boolean b3 = Pattern.matches(PASSWORD, password);
 		if (b3) {
 			System.out.println(b3 + "->" + " Match found");
