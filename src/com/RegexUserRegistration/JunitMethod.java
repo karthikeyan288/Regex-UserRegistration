@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public class JunitMethod {
+public class JunitMethod extends Exception {
 
 	public final static String NAME_PATTERN = "^([A-Z]{1}+[a-z]{2,})*$";
 	public final static String MOBILE_NUMBER = "^[91]+\\s\\d{10}$";
@@ -26,7 +26,7 @@ public class JunitMethod {
 	UserData userData = UserData.getInstance();
 	Scanner sc = new Scanner(System.in);
 
-	public void addfirstName() {
+	public void addfirstName() throws InvalidUserDetailException {
 		System.out.println("Enter the First Name : ");
 		String fname = sc.nextLine();
 		userData.setFname(fname);
@@ -35,22 +35,24 @@ public class JunitMethod {
 			System.out.println(b3 + "->" + " Match found");
 		} else {
 			System.out.println(b3 + "->" + "Match not found");
+			throw new InvalidUserDetailException("enter valid first name");
 		}
 	}
 
-	public void addlastName() {
+	public void addlastName() throws InvalidUserDetailException {
 		System.out.println("Enter the Last Name : ");
 		String lname = sc.nextLine();
 		userData.setLname(lname);
 		boolean b3 = Pattern.matches(NAME_PATTERN, lname);
 		if (b3) {
 			System.out.println(b3 + "->" + " Match found");
+			throw new InvalidUserDetailException("enter valid first name");
 		} else {
 			System.out.println(b3 + "->" + "Match not found");
 		}
 	}
 
-	public void addphoneNumber() {
+	public void addphoneNumber() throws InvalidUserDetailException {
 		System.out.println("Enter the mobile Number : ");
 		String phonenumber = sc.nextLine();
 		userData.setPhonenumber(phonenumber);
@@ -59,19 +61,20 @@ public class JunitMethod {
 			System.out.println(b3 + "->" + " Match found");
 		} else {
 			System.out.println(b3 + "->" + "Match not found");
+			throw new InvalidUserDetailException("enter valid first name");
 		}
 	}
 
-	public void addpassWord() {
+	public void addpassWord() throws InvalidUserDetailException {
 		System.out.println("Enter the  Pass Word : ");
 		String password = sc.nextLine();
 		userData.setPassword(password);
-		;
 		boolean b3 = Pattern.matches(PASSWORD, password);
 		if (b3) {
 			System.out.println(b3 + "->" + " Match found");
 		} else {
 			System.out.println(b3 + "->" + "Match not found");
+			throw new InvalidUserDetailException("enter valid first name");
 		}
 	}
 
@@ -79,8 +82,7 @@ public class JunitMethod {
 		return Pattern.matches(EMAIL_PATTERN, userData.getEmailid());
 	}
 
-
-	public void addemailId() {
+	public void addemailId() throws InvalidUserDetailException {
 		System.out.println("Enter the email id : ");
 		String emailid = sc.nextLine();
 		boolean b3 = Pattern.matches(EMAIL_PATTERN, emailid);
@@ -88,6 +90,7 @@ public class JunitMethod {
 			System.out.println(b3 + "->" + " Match found");
 		} else {
 			System.out.println(b3 + "->" + "Match not found");
+			throw new InvalidUserDetailException("enter valid first name");
 		}
 	}
 }
