@@ -1,5 +1,6 @@
 package com.RegexUserRegistration;
 
+
 import java.rmi.server.UID;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -88,6 +89,6 @@ public class JunitMethod extends Exception {
 				System.out.println("Match Found");
 			throw new InvalidUserDetailException("enter the valid data");
 		};
-		System.out.println(emailId);
+		System.out.println(emailId);	
 	}
 }

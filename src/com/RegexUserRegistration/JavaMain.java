@@ -13,6 +13,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 public class JavaMain {
+
 	static JunitMethod junitMethod;
 	static UserData userData;
 
@@ -69,7 +70,6 @@ public class JavaMain {
 		try {
 			junitMethod.addphoneNumber();
 		} catch (InvalidUserDetailException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		assertEquals(false, userData.getPhonenumber().matches(junitMethod.MOBILE_NUMBER));
@@ -114,5 +114,4 @@ public class JavaMain {
 		}
 		assertEquals(false, userData.getEmailid().matches(junitMethod.EMAIL_PATTERN));
 	}
-
 }
