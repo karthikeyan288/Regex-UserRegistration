@@ -1,5 +1,7 @@
 package com.RegexUserRegistration;
 
+
+import java.rmi.server.UID;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -27,55 +29,51 @@ public class JunitMethod extends Exception {
 	Scanner sc = new Scanner(System.in);
 
 	public void addfirstName() throws InvalidUserDetailException {
-		System.out.println("Enter the First Name : ");
-		String fname = sc.nextLine();
-		userData.setFname(fname);
-		boolean b3 = Pattern.matches(NAME_PATTERN, fname);
-		if (b3) {
-			System.out.println(b3 + "->" + " Match found");
-		} else {
-			System.out.println(b3 + "->" + "Match not found");
-			throw new InvalidUserDetailException("enter valid first name");
-		}
+		IUserRegistration firstname = (fname) -> {
+			System.out.println("Enter the first Name : ");
+			fname = sc.nextLine();
+			userData.setFname(fname);
+			if (fname.matches(NAME_PATTERN))
+				System.out.println("Match Found");
+			throw new InvalidUserDetailException("enter the valid data");
+		};
+		System.out.println(firstname);
 	}
 
 	public void addlastName() throws InvalidUserDetailException {
-		System.out.println("Enter the Last Name : ");
-		String lname = sc.nextLine();
-		userData.setLname(lname);
-		boolean b3 = Pattern.matches(NAME_PATTERN, lname);
-		if (b3) {
-			System.out.println(b3 + "->" + " Match found");
-			throw new InvalidUserDetailException("enter valid first name");
-		} else {
-			System.out.println(b3 + "->" + "Match not found");
-		}
+		IUserRegistration lastname = (lname) -> {
+			System.out.println("Enter the Last Name : ");
+			lname = sc.nextLine();
+			userData.setLname(lname);
+			if (lname.matches(NAME_PATTERN))
+				System.out.println("Match Found");
+			throw new InvalidUserDetailException("enter the valid data");
+		};
+		System.out.println(lastname);
 	}
 
 	public void addphoneNumber() throws InvalidUserDetailException {
-		System.out.println("Enter the mobile Number : ");
-		String phonenumber = sc.nextLine();
-		userData.setPhonenumber(phonenumber);
-		boolean b3 = Pattern.matches(MOBILE_NUMBER, phonenumber);
-		if (b3) {
-			System.out.println(b3 + "->" + " Match found");
-		} else {
-			System.out.println(b3 + "->" + "Match not found");
-			throw new InvalidUserDetailException("enter valid first name");
-		}
+		IUserRegistration phonenumber = (phoneno) -> {
+			System.out.println("Enter the Last Name : ");
+			phoneno = sc.nextLine();
+			userData.setLname(phoneno);
+			if (phoneno.matches(NAME_PATTERN))
+				System.out.println("Match Found");
+			throw new InvalidUserDetailException("enter the valid data");
+		};
+		System.out.println(phonenumber);
 	}
 
 	public void addpassWord() throws InvalidUserDetailException {
-		System.out.println("Enter the  Pass Word : ");
-		String password = sc.nextLine();
-		userData.setPassword(password);
-		boolean b3 = Pattern.matches(PASSWORD, password);
-		if (b3) {
-			System.out.println(b3 + "->" + " Match found");
-		} else {
-			System.out.println(b3 + "->" + "Match not found");
-			throw new InvalidUserDetailException("enter valid first name");
-		}
+		IUserRegistration password = (pass) -> {
+			System.out.println("Enter the Last Name : ");
+			pass = sc.nextLine();
+			userData.setLname(pass);
+			if (pass.matches(NAME_PATTERN))
+				System.out.println("Match Found");
+			throw new InvalidUserDetailException("enter the valid data");
+		};
+		System.out.println(password);
 	}
 
 	public boolean addemailAddress(UserData userData) {
@@ -83,14 +81,14 @@ public class JunitMethod extends Exception {
 	}
 
 	public void addemailId() throws InvalidUserDetailException {
-		System.out.println("Enter the email id : ");
-		String emailid = sc.nextLine();
-		boolean b3 = Pattern.matches(EMAIL_PATTERN, emailid);
-		if (b3) {
-			System.out.println(b3 + "->" + " Match found");
-		} else {
-			System.out.println(b3 + "->" + "Match not found");
-			throw new InvalidUserDetailException("enter valid first name");
-		}
+		IUserRegistration emailId = (email) -> {
+			System.out.println("Enter the Last Name : ");
+			email = sc.nextLine();
+			userData.setLname(email);
+			if (email.matches(NAME_PATTERN))
+				System.out.println("Match Found");
+			throw new InvalidUserDetailException("enter the valid data");
+		};
+		System.out.println(emailId);	
 	}
 }

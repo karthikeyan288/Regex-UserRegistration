@@ -12,7 +12,8 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-public class JavaMain{
+public class JavaMain {
+
 	static JunitMethod junitMethod;
 	static UserData userData;
 
@@ -23,22 +24,14 @@ public class JavaMain{
 	}
 
 	@Test
-	public void test_firstname_should_match_the_regexpattern_asTrue() {
-		try {
-			junitMethod.addfirstName();
-		} catch (InvalidUserDetailException e) {
-			e.printStackTrace();
-		}
+	public void test_firstname_should_match_the_regexpattern_asTrue() throws InvalidUserDetailException {
+		junitMethod.addfirstName();
 		assertEquals(true, userData.getFname().matches(junitMethod.NAME_PATTERN));
 	}
 
 	@Test
-	public void test_firstname_should_match_the_regexpattern_asFalse() {
-		try {
-			junitMethod.addfirstName();
-		} catch (InvalidUserDetailException e) {
-			e.printStackTrace();
-		}
+	public void test_firstname_should_match_the_regexpattern_asFalse() throws InvalidUserDetailException {
+		junitMethod.addfirstName();
 		assertEquals(false, userData.getFname().matches(junitMethod.NAME_PATTERN));
 	}
 
